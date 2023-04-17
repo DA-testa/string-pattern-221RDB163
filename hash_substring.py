@@ -12,7 +12,8 @@ def read_input():
     
     try:
         if(input_type == "F"):
-            with open(f"tests/{input()}") as file:
+            file_path = "06"
+            with open(f"tests/{file_path}") as file:
                 data = file.readlines()
                 P = data[0]
                 T = data[1]
