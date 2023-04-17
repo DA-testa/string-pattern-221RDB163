@@ -4,21 +4,18 @@ def read_input():
     input_type = input()
     P, T = "", ""
     
-    try:
-        if(input_type == "I"):
-            P = input()
-            T = input()
-    except: exit()
-    
-    try:
-        if(input_type == "F"):
-            file_path = "06"
-            with open(f"tests/{file_path}") as file:
-                data = file.readlines()
-                P = data[0]
-                T = data[1]
-                file.close()
-    except: exit()
+
+    if(input_type == "I"):
+        P = input()
+        T = input()
+
+    elif(input_type == "F"):
+        file_path = "06"
+
+        with open(f"tests/{file_path}") as file:
+            P = file.readline()
+            T = file.readline()
+            file.close()
     
     return (P.rstrip(), T.rstrip())
 
