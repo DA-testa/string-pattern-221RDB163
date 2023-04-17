@@ -3,16 +3,20 @@
 def read_input():
     input_type = input()
     
-    if(input_type == "I"):
-        P = input()
-        T = input()
+    try:
+        if(input_type == "I"):
+            P = input()
+            T = input()
+    except: exit()
     
-    if(input_type == "F"):
-        with open(f"tests/{input()}") as file:
-            data = file.readlines()
-            P = data[0]
-            T = data[1]
-            file.close()
+    try:
+        if(input_type == "F"):
+            with open(f"tests/{input()}") as file:
+                data = file.readlines()
+                P = data[0]
+                T = data[1]
+                file.close()
+    except: exit()
     
     return (P.rstrip(), T.rstrip())
 
