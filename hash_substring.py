@@ -1,9 +1,7 @@
 # python3
 
 def read_input():
-    input_type = input()
-    P, T = "", ""
-    
+    input_type = input().rstrip()
 
     if(input_type == "I"):
         P = input()
@@ -12,7 +10,7 @@ def read_input():
     elif(input_type == "F"):
         file_path = "06"
 
-        with open(f"tests/{file_path}") as file:
+        with open(f"tests/{file_path}", "r") as file:
             P = file.readline()
             T = file.readline()
             file.close()
