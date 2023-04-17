@@ -2,6 +2,7 @@
 
 def read_input():
     input_type = input()
+    P, T = "", ""
     
     try:
         if(input_type == "I"):
@@ -11,7 +12,7 @@ def read_input():
     
     try:
         if(input_type == "F"):
-            with open(f"{input()}") as file:
+            with open(f"tests/{input()}") as file:
                 data = file.readlines()
                 P = data[0]
                 T = data[1]
