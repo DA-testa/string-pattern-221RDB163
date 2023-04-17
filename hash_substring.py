@@ -54,7 +54,7 @@ def get_occurrences(pattern : str, text : str):
     for symbol_index in range(text_lenght - pattern_length + 1):
         if(pattern_hash == text_hash):
             if(text[symbol_index: symbol_index + pattern_length] == pattern):
-                positions.append(symbol_index)
+                positions.append(str(symbol_index))
         
         if(symbol_index < text_lenght - pattern_length):
             set_1 = get_unicode_pos(text[symbol_index])
